@@ -1,0 +1,109 @@
+@keyframes home-foto {
+    0% {opacity: 0; transform:translate(0px , 40px)}
+    100% {opacity: 1; transform:translate(0px , 0px)}
+}
+
+@keyframes home-texto {
+    0% {opacity: 0; transform:translate(0px , -40px)}
+    100% {opacity: 1; transform:translate(0px , 0px)}
+}
+
+.capa {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.capa span {
+    color: #f27609;
+    display: block;
+}
+
+.profile-title {
+    color: white;
+    width: 60%;
+    align-items: flex-end;
+    margin-bottom: 10rem;
+
+    animation-name: home-texto;
+    animation-duration: 2s;
+}
+
+.profile-pic {
+    text-align: end;
+    width: 40%;
+    margin-right: 9rem;
+    margin-left: 6rem;
+
+    animation-name: home-foto;
+    animation-duration: 2s;
+}
+
+.profile-pic img {
+    border-radius: 25rem;
+    margin-top: 3.1rem;
+}
+
+.profile-title h1 {
+    font-size: 3.6rem;
+    font-weight: 500;
+    line-height: 3.3rem;
+    margin-top: 15.6rem;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    align-items: flex-start;
+}
+
+.profile-title h2 {
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .capa {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .profile-pic {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    
+        animation-name: home-foto;
+        animation-duration: 2s;
+    }
+    
+    .profile-pic img {
+        border-radius: 25rem;
+        margin-top: 4rem;
+        max-width: 80%;
+    }
+    
+    .profile-title {
+        color: white;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    
+        animation-name: home-texto;
+        animation-duration: 2s;
+    }
+
+    .profile-title h1 {
+        font-size: 3.6rem;
+        font-weight: 500;
+        line-height: 3.3rem;
+        margin-top: 6rem;
+        text-transform: uppercase;
+    }
+    
+    .profile-title h2 {
+        font-size: 2rem;
+        font-weight: 300;
+        margin-top: 0.5rem;
+    }
+       
+}

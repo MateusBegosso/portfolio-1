@@ -1,0 +1,137 @@
+@keyframes navegacao {
+    0% {opacity: 0}
+    50% {opacity: 0}
+    100% {opacity: 1}
+}
+
+@keyframes conteudo {
+    0% {opacity: 0; transform:translate(-40px , 0px)}
+    100% {opacity: 1; transform:translate(0px , 0px)}
+}
+
+body {
+    background-color: #2b2b2b;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.cabecalho {
+    color: white;
+    height: 50px;
+    margin-top: 1rem;
+
+    animation-name: navegacao;
+    animation-duration: 3s;
+}
+
+.cabecalho li {
+    display: inline-block;
+    line-height: 50px;
+    padding: 0 30px;
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.cabecalho ul {
+    height: 50px;
+    text-align: right;
+}
+
+.cabecalho li.menu-icon {
+    display: none;
+}
+
+.cabecalho li.menu-icon:hover {
+    cursor: pointer;
+}
+
+.cabecalho a:hover {
+   color: #f27609; 
+}
+
+main {
+    display: flex;
+    padding: 5rem 6.2rem 5rem 6.2rem;
+
+    animation-name: conteudo;
+    animation-duration: 2s;
+}
+
+.main h1 {
+    color: white;
+    font-weight: normal;
+}
+
+.main h2 {
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 2.5rem;
+    text-transform: uppercase;
+}
+
+.main h3 {
+    color: #f27609;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+.main p {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 24px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 1000px) {
+    .cabecalho ul {
+        text-align: center;
+    }
+    
+    .cabecalho li {
+        display: none;
+        line-height: 50px;
+        padding: 0 30px;
+        font-weight: 300;
+        font-size: 30px;
+    }
+
+    .cabecalho li.menu-icon {
+        display: inline-block;
+        color: #f27609;
+        border-bottom: none;
+    }
+
+    main {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0;
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    .main p {
+        text-align: center;
+    }
+
+    .menujs {
+        height: auto;
+    }
+
+    .menujs ul {
+        height: auto;
+        text-align: center;
+        padding-right: 15%;
+        padding-left: 15%;
+
+    }
+
+    .menujs li {
+        display: block;
+        border-bottom: solid grey 1px;
+        padding-top: 1rem;
+    }
+}
